@@ -1,0 +1,4 @@
+# Rules for Zend Framework
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* index.php
