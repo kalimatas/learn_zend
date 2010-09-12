@@ -1,0 +1,15 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headMeta(). "\n";?>
+    <?php echo $this->headLink(); ?>
+</head>
+
+<body>
+    <h3>Hello layout!</h3> 
+    <?php
+        echo $this->layout()->content;
+    ?>
+</body>
+</html>

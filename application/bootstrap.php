@@ -24,23 +24,34 @@ class Bootstrap{
 		$config = new Zend_Config_Ini(ROOT_DIR .'/application/config.ini',$configSection);
 		Zend_Registry::set('config',$config);
 		date_default_timezone_set($config->date_default_timezone);
-                // db configs
-                $db = Zend_Db::factory($config->db);
-                Zend_Db_Table_Abstract::setDefaultAdapter($db);
-                Zend_Registry::set('db',$db);
+        // db configs
+        $db = Zend_Db::factory($config->db);
+        Zend_Db_Table_Abstract::setDefaultAdapter($db);
+        Zend_Registry::set('db',$db);
 	}
-        /**
-         * Configure Front Controller
-         */ 
+
+    /**
+     * Configure Front Controller
+     */ 
 	public function configFront(){
 		$front = Zend_Controller_Front::getInstance();
 		$front->setControllerDirectory(ROOT_DIR . '/application/controllers');
+        //$front->registerPlugin(new Places_Controller_Plugin_ViewSetup());
 	}
-        /**
-         * Run Application
-         */ 
+
+    /**
+     * Run Application
+     */ 
 	public function runApp(){
 		$this->configFront();
+        // setup layout
+        /*
+         *Zend_Layout::startMvc(
+         *    array('layoutPath' => ROOT_DIR . '/application/views/layouts')
+         *);
+         */
+        $config = Zend_Registry::get('config');
+        Zend_Layout::startMvc($config->layout);
 		$front = Zend_Controller_Front::getInstance();
 		$front->dispatch();
 	}
