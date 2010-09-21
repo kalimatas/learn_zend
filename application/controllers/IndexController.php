@@ -4,9 +4,7 @@ class IndexController extends Zend_Controller_Action{
     {
         $this->view->initvar = 'This is init Var';
         $this->view->headMeta()->setName('Content-Type','text/html; charset=utf-8');
-        $this->view->doctype('XHTML1_STRICT');
         $this->view->headLink()->appendStylesheet('/css/site.css');
-        $this->view->headTitle('Zend Framework');
     }
 
     public function preDispatch()
@@ -19,7 +17,6 @@ class IndexController extends Zend_Controller_Action{
         $this->view->title = 'Welcome';
         $placeFinder = new Places();
         $this->view->places = $placeFinder->fetchLatest();
-
     }
 
     public function myAction()
