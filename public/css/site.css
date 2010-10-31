@@ -1,0 +1,205 @@
+
+/*** The Essential Code ***/
+/* Based on http://www.alistapart.com/articles/holygrail/ */
+
+body {
+    min-width: 770px;
+}
+
+#container {
+    padding-right: 130px; /* RC fullwidth + CC padding */
+}
+
+#container .column {
+    position: relative;
+    float: left;
+}
+
+#content {
+    width: 100%;
+}
+
+#pad {
+    padding: 0 10px; /* CC padding */
+    }
+
+#right {
+    width: 110px; /* RC width */
+    padding: 0 0; /* RC padding */
+    margin-right: -100%;
+}
+
+#footer {
+    clear: both;
+}
+
+/*** End of The Essential Code ***/
+
+#scrn-read {
+    display:none
+}
+
+body,html {
+    font-size:100%;
+    padding:0;
+    margin:0;
+}
+
+body {
+    background: #FFF;
+    font-size:0.8em;
+}
+
+td,div,body {
+    font-family:Verdana,Arial,Helvetica,sans-serif
+}
+
+#header {
+    padding: 0;
+    background: #ffff00 url(../img/logo-yellow.gif) no-repeat;
+    height: 80px;   
+    text-align: right;
+}
+#header img {
+    height: 80px;
+    padding: 0;
+    margin:0;
+    border-left: 1px solid white;
+}
+#header img#first {
+    border-left: none;
+}
+
+#footer {
+    padding: 0.3em ;
+    background: #fff;
+    color: #888;
+    font-size: 0.8em;
+}
+#container {
+}
+
+#left {
+    background: #fff;
+}
+
+#center {
+    background: #fff;
+}
+
+#right {
+    background: #fff;
+}
+
+#container .column {
+    padding-top: 1em;
+    text-align: justify;
+}
+
+h1,h2,h3,h4,h5 {
+    color: #306FDF;
+    font-weight: normal;
+}
+
+a {
+    color: #306FDF;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #16448A;
+    text-decoration: underline;
+}
+
+#right-ad {
+    margin-left: 10px;
+}
+
+#reviews {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#reviews li {
+    margin-bottom: 2em;
+}
+
+#reviews .review-meta {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 0.5em;
+}
+
+#reviews .review-body {
+    margin-top: 0;
+}
+.helpful {
+    color: #555;
+}
+.helpful a {
+    text-decoration: none;
+    border: 1px solid #666;
+    background-color: #ccc;
+    color: black;
+    padding: 1px 2px;
+}
+
+.helpful a:hover {
+    text-decoration: none;
+    background-color: #666;
+    color: #fff;
+}
+
+.failed {
+    color: #f00;
+}
+
+.success {
+    color: #080;
+}
+
+#menu {
+    border-top:1px solid #DFAE6F;
+    background-color: #FA9300;
+    width: 100%;
+    text-align: right;
+    float: left;
+}
+#menu p
+{
+    padding-bottom: 4px;
+    padding-right: 10px;
+    margin: 4px;
+    color: #fff;
+}
+
+#menu p a
+{
+    background-color: inherit;
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu p a:hover
+{
+    text-decoration: underline;
+}
+
+
+#search {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 110px;
+    clear: right;
+}
+#search h3 {
+    margin:0;
+    padding: 0;
+}
+
+#search .input-text {
+    width: 108px;
+}
+#search .input-submit {
+    float: right;
+}

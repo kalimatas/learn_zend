@@ -3,13 +3,18 @@
 <head>
     <?php echo $this->headTitle(); ?>
     <?php echo $this->headMeta(). "\n";?>
-    <?php echo $this->headLink(); ?>
+    <?php echo $this->headLink()->appendStylesheet('/css/site.css'); ?>
 </head>
 
 <body>
-    <h3>Hello layout!</h3> 
-    <?php
-        echo $this->layout()->content;
-    ?>
+    <?php echo $this->partial("_header.phtml"); ?>
+    <div id="container">
+        <div id="content">
+        <?php echo $this->layout()->content; ?>
+        </div>
+        <div id="right">
+        </div>
+    </div>
+    <?php echo $this->partial("_footer.phtml", array("date" => date('d.m.Y'))); ?>
 </body>
 </html>

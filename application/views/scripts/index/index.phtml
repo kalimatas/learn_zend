@@ -1,19 +1,18 @@
-<?php $this->layout()->setLayout('layout1'); ?>
-<h3><?php echo $this->escape($this->title); ?></h3>	
-<h3><?php echo "<h3>commit</h3>"; ?></h3>	
 <div><?php 
-    echo count($this->places);
+    //echo count($this->places);
     $config = Zend_Registry::get('config');
-    echo $this->formatCurrency();
-    $content = "<input />";
-    echo $this->form('form_name',array('id' => 'form_id'));
-    echo $this->formText('input_name','text',array('size' => '30'));
-    
-    echo '<hr />';
-    echo $this->action('my','index');
+    //echo $this->formatCurrency();
+    //$content = "<input />";
+    //echo $this->form('form_name',array('id' => 'form_id'));
+    //echo $this->formText('input_name','text',array('size' => '30'));
+    echo "Content";
+    //echo '<hr />';
+    //echo $this->action('my','index');
     //Zend_Debug::dump($config);
-    for ($i = 0; $i <= 3; $i++){
-        echo "<span>".$this->cycle(array("1","2"))->next()."</span><br />";
-    }
+    /*
+     *for ($i = 0; $i <= 3; $i++){
+     *    echo "<span>".$this->cycle(array("1","2"))->next()."</span><br />";
+     *}
+     */
 ?></div>	
 

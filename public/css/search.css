@@ -1,0 +1,12 @@
+li {
+    margin-bottom: 0.5em;
+    list-style-type: circle;
+}
+
+#error {
+    color: #f00;
+}
+
+#error li{
+    list-style-type: none;
+}

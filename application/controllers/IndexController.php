@@ -4,7 +4,8 @@ class IndexController extends Zend_Controller_Action{
     {
         $this->view->initvar = 'This is init Var';
         $this->view->headMeta()->setName('Content-Type','text/html; charset=utf-8');
-        $this->view->headLink()->appendStylesheet('/css/site.css');
+        //$this->view->headLink()->appendStylesheet('/css/site.css');
+        //$this->_helper->layout->setLayout('layout1');
     }
 
     public function preDispatch()

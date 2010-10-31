@@ -36,7 +36,8 @@ class Bootstrap{
 	public function configFront(){
 		$front = Zend_Controller_Front::getInstance();
 		$front->setControllerDirectory(ROOT_DIR . '/application/controllers');
-        //$front->registerPlugin(new Places_Controller_Plugin_ViewSetup());
+        $front->registerPlugin(new Places_Controller_Plugin_ViewSetup());
+        $front->registerPlugin(new Places_Controller_Plugin_ActionSetup(), 98);
 	}
 
     /**

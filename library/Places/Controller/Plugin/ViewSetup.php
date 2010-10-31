@@ -23,7 +23,7 @@ class Places_Controller_Plugin_ViewSetup extends Zend_Controller_Plugin_Abstract
         $view->originalAction = $request->getActionName();
 
         // Set doctype for view helpers
-        $view->doctype('XHTML1_STRICT');
+        $view->doctype('XHTML1_TRANSITIONAL');
 
         // Adds new helper path to Places view helpers
         $prefix = 'Places_View_Helper';
@@ -31,7 +31,13 @@ class Places_Controller_Plugin_ViewSetup extends Zend_Controller_Plugin_Abstract
         $view->addHelperPath($dir, $prefix);
 
         $view->headMeta()->setName('Content-Type','text/html; charset=utf-8');
-        $view->headLink()->appendStylesheet($view->baseUrl().'/css/site.css');
+        //$view->headLink()->appendStylesheet($view->baseUrl().'/css/site.css');
+        /*
+         *$request = Zend_Controller_Front::getInstance()->getRequest();
+         *$view->headTitle($request->getActionName())
+         *     ->headTitle($request->getControllerName());
+         */
+        $view->headTitle('Page Title');
     }
 }
 ?>
