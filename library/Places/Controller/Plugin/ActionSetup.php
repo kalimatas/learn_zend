@@ -1,10 +1,10 @@
 <?php
 
 class Places_Controller_Plugin_ActionSetup extends 
-      Zend_Contoller_Plugin_Abstract
+      Zend_Controller_Plugin_Abstract
 {
     public function dispatchLookStartup(
-                Zend_Contoller_Request_Abstract $request)
+                Zend_Controller_Request_Abstract $request)
     {
         $front = Zend_Controller_Front::getInstance();
         if ( !$front->hasPlugin('Zend_Controller_Plugin_ActionStack') ){
@@ -16,12 +16,12 @@ class Places_Controller_Plugin_ActionSetup extends
 
         $menuAction = clone($request);
         $menuAction->setActionName('menu')
-                   ->setControllerMenu('index');
+                   ->setControllerName('index');
         $actionStack->pushStack($menuAction);
 
         $advertAction = clone($request);
         $advertAction->setActionName('advert')
-                   ->setControllerMenu('index');
+                   ->setControllerName('index');
         $actionStack->pushStack($advertAction);
     }
 }

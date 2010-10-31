@@ -25,5 +25,26 @@ class IndexController extends Zend_Controller_Action{
         $this->view->title = 'My Action';
     }
 
+    public function menuAction()
+    {
+        $mainMenu = array(
+            array('title' => 'Home',
+            'url'=>$this->view->url(array(),null,true)),
+            array('title'=>'Browse Places',
+            'url'=>$this->view->url(array('controller'=>'place','action'=>'browse'),null,true)),
+            array('title'=>'Articles',
+            'url'=>$this->view->url(array('controller'=>'articles'),null,true)),
+            array('title'=>'About',
+            'url'=>$this->view->url(array('controller'=>'about'),null,true))
+        );
+        $this->view->menu = $mainMenu;
+        $this->_helper->viewRenderer->setResponseSegment('menu');
+    }
+
+    public function advertAction()
+    {
+        $this->_helper->viewRenderer->setResponseSegment('advert');
+    }
+
 }
 ?>

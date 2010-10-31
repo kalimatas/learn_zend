@@ -8,13 +8,15 @@
 
 <body>
     <?php echo $this->partial("_header.phtml"); ?>
+    <?php echo $this->layout()->menu ?>
     <div id="container">
         <div id="content">
         <?php echo $this->layout()->content; ?>
         </div>
         <div id="right">
+        <?php echo $this->layout()->advert ?>
         </div>
     </div>
-    <?php echo $this->partial("_footer.phtml", array("date" => date('d.m.Y'))); ?>
+    <?php echo $this->partial("_footer.phtml", array("date" => date('Y'))); ?>
 </body>
 </html>
