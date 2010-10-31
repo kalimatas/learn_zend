@@ -1,0 +1,8 @@
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl().'/css/menu.css');
+?>
+<div id="menu">
+    <ul id="main-menu">
+    <?php echo $this->partialLoop('index/_menuItem.phtml',$this->menu) ?>
+    </ul>
+</div>

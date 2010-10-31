@@ -1,0 +1,7 @@
+<?php 
+    $url = $this->url(array('controller'=>'place','action'=>'index','id'=>$this->id)); 
+?>
+<tr>
+    <td><a href="<?php echo $url; ?>"><?php echo $this->escape($this->name); ?></a></td>
+    <td><?php $this->date_updated; ?></td>
+</tr>
