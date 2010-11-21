@@ -1,5 +1,6 @@
 <?php
 class IndexController extends Zend_Controller_Action{
+
     public function init()
     {
         $this->view->initvar = 'This is init Var';
@@ -15,7 +16,7 @@ class IndexController extends Zend_Controller_Action{
 
     public function indexAction()
     {
-        $this->view->title = 'Welcome';
+        $this->view->headTitle('Welcome');
         $placeFinder = new Places();
         $this->view->places = $placeFinder->fetchLatest();
     }

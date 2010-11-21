@@ -4,7 +4,9 @@
     <?php if (count($this->places)) : ?>
         <h2>Recent places</h2>
         <table>
-        <?php echo $this->partialLoop('index/_placeRow.phtml',$this->places) ?>
+        <?php 
+            echo $this->partialLoop('index/_placeRow.phtml',$this->places); 
+        ?>
         </table>
     <?php endif; ?>
 </div>	

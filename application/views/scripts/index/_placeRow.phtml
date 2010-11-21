@@ -3,5 +3,7 @@
 ?>
 <tr>
     <td><a href="<?php echo $url; ?>"><?php echo $this->escape($this->name); ?></a></td>
-    <td><?php $this->date_updated; ?></td>
+    <td><?php 
+           echo $this->displayDate(time()); 
+        ?></td>
 </tr>

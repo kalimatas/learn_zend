@@ -36,8 +36,26 @@ class Places_Controller_Plugin_ViewSetup extends Zend_Controller_Plugin_Abstract
          *$request = Zend_Controller_Front::getInstance()->getRequest();
          *$view->headTitle($request->getActionName())
          *     ->headTitle($request->getControllerName());
+         *$view->headTitle('Page Title');
          */
-        $view->headTitle('Page Title');
+    }
+
+    public function postDispatch(Zend_Controller_Request_Abstract $request)
+    {
+        if (!$request->isDispatched()){
+            return;
+        }
+        $view = $this->_view;
+        if (count($view->headTitle()->getValue()) == 0){
+            $view->headTitle($view->title);
+        }
+        $view->headTitle()->setSeparator(' - ');
+        $view->headTitle('Places to take the monsters!');
+    }
+
+    public function dispatchLoopShutdown()
+    {
+        //$this->getResponse()->appendBody("<p>Shutdown!</p>");
     }
 }
 ?>

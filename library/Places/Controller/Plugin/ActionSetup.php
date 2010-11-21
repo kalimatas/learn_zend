@@ -1,10 +1,8 @@
 <?php
 
-class Places_Controller_Plugin_ActionSetup extends 
-      Zend_Controller_Plugin_Abstract
+class Places_Controller_Plugin_ActionSetup extends Zend_Controller_Plugin_Abstract
 {
-    public function dispatchLookStartup(
-                Zend_Controller_Request_Abstract $request)
+    public function dispatchLoopStartup(Zend_Controller_Request_Abstract $request)
     {
         $front = Zend_Controller_Front::getInstance();
         if ( !$front->hasPlugin('Zend_Controller_Plugin_ActionStack') ){
